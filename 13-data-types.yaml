@@ -1,0 +1,20 @@
+- name: devops
+  hosts: local
+  connection: local
+  vars:
+    corse_name: "devops with aws"
+    duration: 20hrs
+    topics:
+    - linux
+    - shell
+    - ansible
+    - aws
+  live: true
+  tools:
+    ci: jenkins
+    cloud: aws
+    containerzation: docker
+  tasks:
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "i am learning corse {{ course_name }}, topics are {{ topics }}, {{ live }}, {{ tools }}," 
