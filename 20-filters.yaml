@@ -1,0 +1,19 @@
+- name: filters
+  hosts: web
+  tasks:
+  - name: undefined variable
+    ansible.bultin.debug:
+      msg: "hello {{ person | default('siddhu') }}"
+  - name: convert string to list
+    vars:
+      fruits: "apple,banana,orange"
+      ansible.builtin.debug:
+        msg: "{{ fruits | split(',') }}"      
+  - name: convert string to list
+    vars:
+      course:
+        name: ansible
+        duration: 20hrs
+      
+      ansible.builtin.debug:
+        msg: "course info: {{ course | dict2items }}"
