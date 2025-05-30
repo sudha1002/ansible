@@ -6,6 +6,7 @@
     sg_id: sg-0b36ec0ade1771435
     ami_id: ami-09c813fb71547fc4f
     instance_type: t3.micro
+    zone: devaws.fun
     instances:
     - mysql
     - backend
